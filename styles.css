@@ -1,0 +1,136 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#container-div{ 
+    background-color: rgb(0, 0, 0);
+    background-image: url("img/portrait.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-shadow: 2px 2px 10px rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+#resHeading {
+    color: black;
+    width: 60%;
+    margin: 3rem auto;
+    font-size: 24px;
+    text-align: center;
+} 
+
+button, input {
+    width: 200px;
+    height: 30px;
+    border: none;
+    outline: none;
+    margin: 1rem auto;
+    font: inherit;
+} 
+
+button {
+    background-color: rgb(148, 205, 219);
+}
+
+button:hover{
+    background-color: rgb(130, 43, 156);
+}
+
+h2 {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    margin: 1rem;
+}
+
+
+@media screen and (min-width: 900px){
+    #container-div {
+        width: 70%;
+        height: 320px;
+        background-color: rgb(0, 0, 0);
+        background-image: url("img/landscape.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        margin: auto;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        text-shadow: 2px 2px 10px rgb(161, 252, 255);
+    }
+    
+    #form-div {
+        width: 64%;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 1rem;
+        height: 300px;
+        padding-bottom: 4rem;
+        margin: 50px auto;
+    }
+    
+    h1 {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        justify-content: space-around;
+        font-size: 36px;
+        height: 300px;
+        padding: 1rem 2rem 1rem 2rem;
+        margin: auto;
+    }
+    
+    h2 {
+        padding: 1rem;
+    }
+    
+    #resHeading {
+        color: black;
+        width: 60%;
+        margin: 3rem auto;
+        font-size: 30px;
+        text-align: center;
+    } 
+    
+    button, input {
+        width: 200px;
+        height: 30px;
+        border: none;
+        outline: none;
+        margin: auto;
+    }
+
+    button {
+        background-color: rgb(240, 240, 240);
+    }
+    
+    button:hover{
+        background-color: rgb(219, 90, 144);
+    }
+}
