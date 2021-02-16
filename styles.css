@@ -1,136 +1,186 @@
-*, *::after, *::before {
-    box-sizing: border-box;
+*, *::after, *::before{
     margin: 0;
     padding: 0;
 }
 
 html{
-    font-family: 'Montserrat', sans-serif;
-}
-
-#container-div{ 
-    background-color: rgb(0, 0, 0);
-    background-image: url("img/portrait.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    text-shadow: 2px 2px 10px rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
 }
 
-form {
+#wrapperDiv {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 1rem;
+    width: 80%;
+    margin: 4rem auto;
 }
 
-#resHeading {
-    color: black;
-    width: 60%;
-    margin: 3rem auto;
-    font-size: 24px;
-    text-align: center;
-} 
+#formWrapper {
+    background-image: linear-gradient(to top right, rgb(0, 0, 0), rgb(95, 95, 95));
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-button, input {
-    width: 200px;
-    height: 30px;
+.input-container{
+    position: relative;
+}
+
+.pass-img{
+    position: absolute;
+    width: 10px;
+    top: 11.5px;
+    left: 18px;
+}
+
+.user-img{
+    position: absolute;
+    width: 10px;
+    top: 12.5px;
+    left: 18px;
+}
+
+button, label, input{
+    display: block;
+    margin: 0.5rem;
+    width: 140px;
+}
+
+input, button{
+    height: 36px;
+    border-radius: 10px;
     border: none;
     outline: none;
-    margin: 1rem auto;
-    font: inherit;
-} 
-
-button {
-    background-color: rgb(148, 205, 219);
 }
 
-button:hover{
-    background-color: rgb(130, 43, 156);
+#resultDiv {
+    background-color: #bbbbbb;
+    padding: 2rem;
+    color:  rgb(39, 39, 39);
+}
+
+#resultDiv p {
+    color:  rgb(39, 39, 39);
 }
 
 h2 {
-    padding: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 22px;
 }
 
-h1 {
+h3 {
+    font-size: 16px;
+}
+
+p { 
+    font-size: 12px; 
+}
+
+#resPar, #alertPar, #welcome {
+    font-size: 16px;
+}
+
+h2, h3, p {
+    padding: 0.6rem;
+    color: whitesmoke
+}
+
+button {
+    background-color: #59CCBD;
+}
+
+#logOut {
+    margin: auto;
+}
+
+ol {
+    font-size: 0.9rem;
+    text-align: start;
     margin: 1rem;
 }
 
 
-@media screen and (min-width: 900px){
-    #container-div {
-        width: 70%;
-        height: 320px;
-        background-color: rgb(0, 0, 0);
-        background-image: url("img/landscape.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        margin: auto;
-        margin-top: 80px;
-        display: flex;
+
+@media screen and (min-width: 660px){
+    #wrapperDiv {
         flex-direction: row;
-        justify-content: space-between;
-        text-align: center;
-        text-shadow: 2px 2px 10px rgb(161, 252, 255);
+        width: 80%;
+        margin: 4rem auto;
     }
     
-    #form-div {
-        width: 64%;
-    }
-    
-    form {
+    #formWrapper {
+        width: 40%;
+        background-image: linear-gradient(to top right, rgb(0, 0, 0), rgb(95, 95, 95));
+        height: 550px;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        padding: 1rem;
-        height: 300px;
-        padding-bottom: 4rem;
-        margin: 50px auto;
+        align-items: center;
     }
     
-    h1 {
-        display: flex;
-        flex-direction: column;
-        width: 20%;
-        justify-content: space-around;
-        font-size: 36px;
-        height: 300px;
-        padding: 1rem 2rem 1rem 2rem;
-        margin: auto;
+    #resultDiv {
+        width: 60%;
+        background-color: #bbbbbb;
+        padding: 2rem;
+        color:  rgb(39, 39, 39);
+    }
+    
+    #resultDiv p {
+        color:  rgb(39, 39, 39);
+    }
+    
+    button, label, input{
+        display: block;
+        margin: 0.5rem;
+        width: 200px;
+    }
+    
+    .input-container{
+        position: relative;
+    }
+    
+    .pass-img{
+        position: absolute;
+        width: 10px;
+        top: 11.5px;
+        left: 18px;
+    }
+    
+    .user-img{
+        position: absolute;
+        width: 10px;
+        top: 12.5px;
+        left: 18px;
+    }
+    
+    input, button{
+        height: 36px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
     }
     
     h2 {
-        padding: 1rem;
-    }
-    
-    #resHeading {
-        color: black;
-        width: 60%;
-        margin: 3rem auto;
-        font-size: 30px;
-        text-align: center;
-    } 
-    
-    button, input {
-        width: 200px;
-        height: 30px;
-        border: none;
-        outline: none;
-        margin: auto;
+        margin-top: 2rem;
     }
 
-    button {
-        background-color: rgb(240, 240, 240);
+    h2, h3, p {
+        padding: 1rem;
+        color: whitesmoke
     }
     
-    button:hover{
-        background-color: rgb(219, 90, 144);
+    button {
+        background-color: #59CCBD;
     }
+    
+    #logOut {
+        margin: auto;
+    }
+    
+    ol {
+        font-size: 0.9rem;
+        text-align: start;
+        margin: 1rem;
+    } 
 }
+
