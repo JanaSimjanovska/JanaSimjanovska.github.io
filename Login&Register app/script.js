@@ -13,7 +13,7 @@ let showIfAdmin = document.getElementById("showIfAdmin");
 let welcomePar = document.getElementById("welcome");
 let usernamesList = document.getElementById("usernamesList");
 
-console.log(resPar, logOutBtn, showIfAdmin, welcomePar, usernamesList, logOutBtn);
+console.log(newUserUsername, newUserPassword, usernameInput, passwordInput);
 
 logOutBtn.style.display = "none";
 
@@ -21,7 +21,7 @@ logOutBtn.style.display = "none";
 function User (username, password, isAdmin) {
     this.username = username;
     this.pass = password;
-    this.isAdmin = isAdmin;
+    this.isAdmin = isAdmin; 
 }
 
 
@@ -31,7 +31,22 @@ let testUser = new User("NadjaI", "nadja123", false);
 let users = [testUser, admin];
 
 
+
 function createUser(username, pass){
+    for(i = 0; i < users.length; i++){
+        if(username === users[i].username){
+            alertPar.innerText = `Username already exists!`;
+            document.getElementById("usernamesList").innerHTML = "";
+            return;
+        }
+        else if(pass === users[i].pass){
+            alertPar.innerText = `Password already exists!`
+            document.getElementById("usernamesList").innerHTML = "";
+            return;
+        }
+    }
+
+    
     if(username === "" || pass === ""){
         alertPar.innerText = `Username and password fields can't be empty!`
         document.getElementById("usernamesList").innerHTML = "";
@@ -48,10 +63,10 @@ function createUser(username, pass){
         document.getElementById("usernamesList").innerText = "";
         users.push(new User(username, pass, false));
         welcomePar.innerText = `Welcome ${username}! Go ahead and login with the username and password you created!`
-        for(let i = 0; i < users.length; i++){
-            usernamesList.innerHTML += 
-            `<li>${users[i].username}</li>`
-        }
+        // for(let i = 0; i < users.length; i++){
+        //     usernamesList.innerHTML += 
+        //     `<li>${users[i].username}</li>`
+        // }
         alertPar.innerText = ""; 
     }
 }
@@ -76,7 +91,7 @@ function checkStatus(array, username, pass){
         else {
             if(array[usersIndex].isAdmin === true){
                 for(let j = 0; j < array.length; j++){
-                    resPar.innerText = `Welcome Admin ${username}!`;
+                    resPar.innerText = `Welcome Admin ${username}!\nThese are all the existing accounts currently:`;
                     showIfAdmin.innerHTML += `<li>Username: ${array[j].username}; Password: ${array[j].pass}; isAdmin: ${array[j].isAdmin};</li>` 
                 }
             }
@@ -125,18 +140,35 @@ loginBtn.addEventListener("click", function(){
 })
 
 
-document.getElementById("userName").addEventListener("keypress", function(){
+usernameInput.addEventListener("touchstart", function(){
+    document.getElementsByClassName("user-img")[0].style.display = "none";
+
+})
+
+usernameInput.addEventListener("keypress", function(){
     document.getElementsByClassName("user-img")[0].style.display = "none";
 })
 
-document.getElementById("pass").addEventListener("keypress", function(){
+passwordInput.addEventListener("keypress", function(){
     document.getElementsByClassName("pass-img")[0].style.display = "none";
 })
 
-document.getElementById("newUserUsername").addEventListener("keypress", function(){
+passwordInput.addEventListener("touchstart", function(){
+    document.getElementsByClassName("pass-img")[0].style.display = "none";
+})
+
+newUserUsername.addEventListener("keypress", function(){
     document.getElementsByClassName("user-img")[1].style.display = "none";
 })
 
-document.getElementById("newUserPass").addEventListener("keypress", function(){
+newUserUsername.addEventListener("touchstart", function(){
+    document.getElementsByClassName("user-img")[1].style.display = "none";
+})
+
+newUserPassword.addEventListener("keypress", function(){
+    document.getElementsByClassName("pass-img")[1].style.display = "none";
+})
+
+newUserPassword.addEventListener("touchstart", function(){
     document.getElementsByClassName("pass-img")[1].style.display = "none";
 })
