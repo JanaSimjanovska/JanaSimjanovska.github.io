@@ -261,30 +261,40 @@ function updateDisplayField(){
     
 }
 
-function printEquation(){
+function printEquationAndResult(){
 
     let equation = "";
     for (const element of expressionArrayToPrint) {
         equation += `${element} `
     }
 
-    if(equation.length > 30){
-        let equationSliced = equation.slice(-30);
-        equationField.innerText = `...${equationSliced}`;
+    if(result === "Number too large"){
+        displayField.innerText = "Number too large";
+        equationField.innerText = "Error";
+        result = "";
+
     }
 
-    if(result === "Number too large" || result === "Can't divide by zero"){
-        displayField.innerText = result;
+    else if(result === "Can't divide by zero"){
+        displayField.innerText = "Can't divide by zero";
         equationField.innerText = "Error";
+        result = "";
     }
+
     else if (isNaN(result)){
         displayField.innerText = "Invalid operation";
         equationField.innerText = "Error";
         result = "";
     }
+
+    else if(equation.length > 30){
+        let equationSliced = equation.slice(-30);
+        equationField.innerText = `...${equationSliced}`;
+    }
     
     else{
         equationField.innerText = equation;
+        displayField.innerText = result;
     }
 }
 
@@ -307,14 +317,14 @@ function calculate(){
     expressionArray = addAndSubtract(expressionArray);
     result = expressionArray;
     expressionArrayToPrint.push(result);
-    printEquation();
+    printEquationAndResult();
 
 }
 
 
 for(let i = 0; i < numBtns.length; i++){
     numBtns[i].addEventListener('click', function(){
-        printEquation();
+        printEquationAndResult();
         console.log(operand);
         getOperand(numBtns[i].dataset.num);
         updateDisplayField();
@@ -328,7 +338,7 @@ for(let i = 0; i < opsBtns.length; i++){
         
         getOperator(opsBtns[i].dataset.ops);
         updateDisplayField();
-        printEquation();
+        printEquationAndResult();
         operand = "";
     
     })   
@@ -351,7 +361,6 @@ equalsBtn.addEventListener("click", function(){
 
     calculate();
     
-    displayField.innerText = result;
     console.log(operand);
     console.log(expressionArray);
     expressionArray = [];
