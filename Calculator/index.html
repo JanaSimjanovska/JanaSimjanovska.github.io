@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="calculatorWrapper">
+
+        <div id="typeField">
+            <div id="equation"></div>
+            <div id="currentTypeField"></div>
+        </div>
+
+        <div id="clickField">
+            <div>
+                <button type="button" id="power" data-ops="^">x<sup>y</sup></button>
+                <button type="button" data-ops="&#8730" id="sqrt">&#8730</button>
+                <button type="button" data-ops="&#37" id="percent">&#37</button>
+                <button type="button" data-ops="/">÷</button>
+            </div>
+            <div>
+                <button type="button" data-num="7">7</button>
+                <button type="button" data-num="8">8</button>
+                <button type="button" data-num="9">9</button>
+                <button type="button" data-ops="*">*</button>
+            </div>
+            <div>
+                <button type="button" data-num="4">4</button>
+                <button type="button" data-num="5">5</button>
+                <button type="button" data-num="6">6</button>
+                <button type="button" data-ops="-">-</button>
+            </div>
+            <div>
+                <button type="button" data-num="1">1</button>
+                <button type="button" data-num="2">2</button>
+                <button type="button" data-num="3">3</button>
+                <button type="button" data-ops="+">+</button>
+            </div>
+            <div>
+                <button type="button" id="clearAll">C</button>
+                <button type="button" data-num="0">0</button>
+                <button type="button" data-num=".">.</button>
+                <button type="button" id="equals" data-result="=">=</button>
+            </div>
+        </div>
+    </div>
+
+
+    <audio id="clickSound" src="audio/office-calculator-single-button-press.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

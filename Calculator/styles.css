@@ -1,0 +1,163 @@
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000000;
+    background-image: 
+       radial-gradient(70% 20% ellipse at center top, #201e40 0%, rgba(0,0,0,0) 100%),
+      radial-gradient(70% 30% ellipse at center bottom, #261226 0%, #100a1c 100%);
+    background-attachment: fixed;
+}
+
+#calculatorWrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    border: 1px solid #6cacc5;
+    padding: 0.5rem;
+}
+
+#typeField {
+    border-bottom: 1px solid #6cacc5;;
+    margin: 0.4rem;
+    height: 100px;
+    width:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+#equation {
+    width: 180px;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    padding: 0.5rem;
+    font-size: 14px;
+    color:  #6cacc5;
+}
+
+
+#currentTypeField {
+    width: 180px;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    padding: 0.5rem;
+    font-size: 18px;
+    color:#c97874;
+}
+
+
+#clearAll {
+    color: white;
+}
+
+
+
+button {
+    width: 40px;
+    height: 40px;
+    margin: 0.25rem 0.125rem;
+    border-radius: 5px;
+    border-style: none;
+    background-color: rgb(25, 25, 51);
+    color:#c97874;
+    font-size: 20px;
+    outline: none;
+}
+
+button:hover {
+    background-color: #261226;
+}
+
+button:active {
+transform: scale(0.9, 0.9);
+}
+
+.ops {
+    color: #6cacc5;
+}
+
+#equals {
+    color: white;
+}
+
+sup {
+    vertical-align:top;
+    font-size: 10px;
+}
+
+
+@media screen and (min-width: 600px) {
+    
+        button {
+            width: 70px;
+            height: 70px;
+            margin: 0.4rem 0.3rem;
+            border-radius: 5px;
+            border-style: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(25, 25, 51);
+            color:#c97874;
+            font-size: 36px;
+            outline: none;
+        }
+    
+        sup {
+            font-size: 20px;
+        }
+    
+
+        #currentTypeField {
+            width: 320px;
+            font-size: 34px;
+        }
+
+        #equation {
+            width: 320px;
+            font-size: 20px;
+        }
+    
+    }
+
+    @media screen and (max-height: 500px) {
+        button {
+            width: 70px;
+            height: 36px;
+            font-size: 24px;
+            margin: 00.25rem;
+        }
+
+        sup {
+            vertical-align:top;
+            font-size: 10px;
+        }
+
+
+        #currentTypeField {
+            width: 320px;
+            font-size: 28px;
+        }
+
+        #equation {
+            width: 320px;
+            font-size: 18px;
+        }
+    }
