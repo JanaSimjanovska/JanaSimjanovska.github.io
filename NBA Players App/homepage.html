@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="src/css/style.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+</head>
+<body>
+    
+    <div class="wrapper-homepage">
+        <div class="sign-in-panel">
+            <div class="logo-container"><img src="src/img/nba_PNG14.png" alt="nba-logo" class="logo" /></div>
+            <form action="" method="POST" class="sign-in-form"> 
+                <input type="text" name="username" id="usernameSignIn" class="input input-wider" placeholder="Username" required />
+                <input type="password" name="password" id="passwordSignIn" class="input input-wider" placeholder="Password" required />   
+                <button type="button" class="input btn" id="signInBtn">Sign In</button>  
+                <p class="input text-over-link">Don't have an account yet?</p>
+                <a href="#" class="input register-link" id="openSignInPanel">Register now</a>  
+            </form> 
+            <div class="error-msgs" id="errorMsgParagraphSignIn">
+                
+            </div>
+        </div>
+    
+        <div id="page-mask"></div>
+    
+        <div id="popup-window">
+            <div class="logo-container"><img src="src/img/nba_PNG14.png" alt="nba-logo" class="logo" /></div>
+
+            <form action="" method="POST" class="sign-up-form"> 
+
+                <input type="email" name="email" id="email" class="input input-wider" placeholder="Email" required />
+                <input type="text" name="usernameSignUp" id="usernameSignUp" class="input input-wider" placeholder="Username" required />
+                <input type="password" name="passwordSignUp" id="passwordSignUp" class="input input-wider" placeholder="Password" required />   
+                <button type="button" class="input btn" id="signUpBtn">Sign Up</button>  
+                <button type="button" class="input btn" id="backToSignInBtn">Back</button>  
+            </form> 
+            <div class="error-msgs" id="errorMsgParagraphSignUp">
+
+            </div>   
+        </div>
+    </div>
+    
+
+    <script src="src/js/homepage.js"></script>
+    <script src="src/js/script.js"></script>
+
+
+</body>
+</html>

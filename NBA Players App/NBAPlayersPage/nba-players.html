@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link href="../src/css/style.css" rel="stylesheet" type="text/css" />
+
+    <title>NBA Players App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    
+
+</head>
+<body>
+    <div class="main-page-wrapper">
+
+        <header class="header" id="mainHeader">
+            <nav class="nav-flex-wrapper">
+                <div>
+                    <img src="../src/img/nba_PNG14.png" class="logo-main" />
+                </div>
+                <button type="button" class="btn my-team-btn" id="goToMyTeamBtn">My Team</button>
+                <div id="usernameDisplay">Username</div>
+            </nav>
+        </header>
+        
+        <div class="filter-table" id="filterTable">
+            <div class="item"><p id="filter-by-span">Filter by:<p></div>
+            <div class="item">
+                <input type="text" class="filter-fields input" id="fullName" placeholder="Full name">
+                <button type="button" class="filter-fields btn" id="fullNameBtn">Go</button>
+            </div>
+            <div class="item">
+                <label for="position">Position:</label>
+                <select name="position" class="filter-fields input" id="position">
+                    <option value="C">C</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                </select>
+                <button type="button" class="filter-fields btn" id="positionBtn">Go</button>
+            </div>
+            <div class="item">
+                <button type="button" class="filter-fields table-btn" id="ascendingDescendingBtn">First name / Ascending</button>
+            </div>
+        </div>
+
+        <div class="progress-bar" id="progressBar">
+            <span class="bar">
+                <span class="progress"></span>
+            </span>
+        </div>
+
+        <div id="mainTable">
+            <table class="table">
+                <thead id="tHead">
+                </thead>
+                <tbody id="result">
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="btn-wrapper" id="prevNext">
+            <button class="btn input" id="previousButton">&lt;&lt; Previous 10</button>
+            <button class="btn input" id="nextButton">Next 10 &gt;&gt;</button>
+        </div>
+
+        <div class="center">
+            <button type="button" class="btn input center" id="backFromFiltered">Show all</button>
+        </div>
+        
+        <div class="warning-div" id="warningDiv"></div>
+        
+        <div id="myTeamPage">
+
+            <header class="header" id="myTeamHeader">
+                <nav class="nav-flex-wrapper">
+                    <div>
+                         <img src="../src/img/nba_PNG14.png" class="logo-main" />
+                    </div>
+     
+                    
+                     <button type="button" class="btn my-team-btn" id="backToMainBtn">Back to Main</button>
+                    
+                    <div id="usernameDisplayMyTeam">Username</div>
+                </nav>
+             </header>
+    
+    
+            <table class="table" id="myTeamTable">
+                <thead id="tHeadMyTeam">
+                </thead>
+                <tbody id="resultMyTeam">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="../src/js/nba-players.js"></script>
+    <script src="../src/js/script.js"></script>
+
+
+</body>
+</html>
