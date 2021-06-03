@@ -131,6 +131,8 @@ const ValidateSignUp = (email, username, password, users, errMsgPar) => {
 //#region App functionalities 
 
 
+let apiData = null;
+
 const togglePopUp = toggle => {
     if(toggle){
         popUpSignUp.style.display = "block";
@@ -258,7 +260,7 @@ const getPlayers = () => {
     fetch(`${baseUrl}?page=${currentPage}${shownPerPage}`)
         .then(response => response.json())
         .then(players => {
-            
+            apiData = players;
             toggleLoader(false);
             console.log(players);
             displayPlayers(players.data);
@@ -347,43 +349,24 @@ const sortByNameDesc = (player1, player2) => (player2.first_name).localeCompare(
 
 const sortByAscending = () => {
     toggleLoader(true);
-   
     backToAllBtn.style.display = "none";
     navBtns.style.display = "flex";
-    fetch(`${baseUrl}?page=${currentPage}${shownPerPage}`)
-        .then(response => response.json())
-        .then(players => {
-            
-            toggleLoader(false);
-            let ascending = players.data.sort(sortByNameAsc);
-            displayPlayers(ascending);
-            toggleNavButtons(currentPage);
-            
-        })
-        .catch(error => {
-            toggleLoader(false);
-            console.error(error)
-        });
+    let ascending = apiData.data.sort(sortByNameAsc);
+    displayPlayers(ascending);
+    toggleNavButtons(currentPage);
+    toggleLoader(false);
+    
+   
 }
 
 const sortByDescending = () => {
     toggleLoader(true);
     backToAllBtn.style.display = "none";
     navBtns.style.display = "flex";
-
-    fetch(`${baseUrl}?page=${currentPage}${shownPerPage}`)
-        .then(response => response.json())
-        .then(players => {
-            
-            toggleLoader(false);
-            let descending = players.data.sort(sortByNameDesc);
-            displayPlayers(descending);
-            toggleNavButtons(currentPage);
-        })
-        .catch(error => {
-            toggleLoader(false);
-            console.error(error)
-        });
+    let descending = apiData.data.sort(sortByNameDesc);
+    displayPlayers(descending);
+    toggleNavButtons(currentPage);
+    toggleLoader(false);
 }
 
 
