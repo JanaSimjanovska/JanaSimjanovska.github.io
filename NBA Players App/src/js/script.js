@@ -356,7 +356,6 @@ const sortByAscending = () => {
     toggleNavButtons(currentPage);
     toggleLoader(false);
     
-   
 }
 
 const sortByDescending = () => {

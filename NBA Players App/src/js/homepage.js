@@ -14,7 +14,7 @@ const linkToSignUp = document.getElementById("openSignInPanel");
 const errMsgParSignIn = document.getElementById("errorMsgParagraphSignIn");
 const errMsgParSignUp = document.getElementById("errorMsgParagraphSignUp");
 const backToSignIn = document.getElementById("backToSignInBtn");
-
+ 
 //#endregion
 
 //#region Event listeners
