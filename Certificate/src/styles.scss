@@ -118,6 +118,7 @@ h1 {
     font-family: 'Source Sans Pro', sans-serif;
 
     font-size: 5vw;
+    letter-spacing: 1vw;
 
 }
 
@@ -172,4 +173,9 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
 }
