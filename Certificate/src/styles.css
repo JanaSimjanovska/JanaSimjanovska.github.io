@@ -8,8 +8,6 @@
 body {
   width: 100vw;
   height: 100vh;
-  min-width: 1000px;
-  min-height: auto;
   padding: 2% 0 2% 0;
   margin: auto;
   background-color: #FFFFD9;
@@ -35,6 +33,9 @@ body {
 }
 
 .middle-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 65vh;
 }
 
@@ -153,7 +154,7 @@ p {
 }
 
 .facebook, .instagram, .twitter {
-  width: 3vw;
+  width: 2.5vw;
 }
 
 .signature {
@@ -163,6 +164,7 @@ p {
 
 .stamp {
   width: 9vw;
+  vertical-align: -4.5vh;
 }
 
 .treebanks-logo {
@@ -198,5 +200,8 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=styles.css.map */
