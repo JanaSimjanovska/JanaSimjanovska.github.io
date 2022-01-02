@@ -8,6 +8,8 @@
 body {
   width: 100vw;
   height: 100vh;
+  min-width: 1000px;
+  min-height: auto;
   padding: 2% 0 2% 0;
   margin: auto;
   background-color: #FFFFD9;
@@ -147,10 +149,11 @@ h2 {
 p {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1vw;
+  padding: 0.5vw;
 }
 
 .facebook, .instagram, .twitter {
-  width: 2vw;
+  width: 3vw;
 }
 
 .signature {
@@ -174,9 +177,17 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .wrapper {

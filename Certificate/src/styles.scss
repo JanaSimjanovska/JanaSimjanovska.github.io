@@ -3,10 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+ 
 body {
     width: 100vw;
     height: 100vh;
+    min-width: 1000px;
+    min-height: auto;
     padding: 2% 0 2% 0;
     margin: auto;
     background-color: #FFFFD9;
@@ -83,8 +85,6 @@ body {
 // TODO:
 // razmisli za padingot dali da ti e fiksen, vidi kako skalira celata ramka
 // razmisli za dizajn na mob, hostiraj go na github za da vidis kako izglea
-// najdi social media ikoncinja
-// najdi ubavi fontovi
 // izbrisi gi stariot html i css i preimenuvaj gi ovie
 
 .certificate-content {
@@ -94,7 +94,6 @@ body {
     flex-direction: column;
     justify-content: space-around;
 }
-
 
 
 .certificate-content {
@@ -149,11 +148,11 @@ h2 {
 p {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1vw;
-
+    padding: 0.5vw;
 }
 
 .facebook, .instagram, .twitter {
-    width: 2vw;
+    width: 3vw;
 }
 
 .signature {
@@ -172,7 +171,12 @@ p {
 .certificate-imgs {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
 }
 
 .wrapper {
