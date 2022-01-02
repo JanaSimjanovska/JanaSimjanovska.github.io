@@ -1,0 +1,180 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 2% 0 2% 0;
+  margin: auto;
+  background-color: #FFFFD9;
+  color: #669700;
+}
+
+.horizontal-img {
+  width: 90%;
+  margin: auto;
+}
+
+.horizontal-img, .vertical-forest, .middle-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.leaf-img {
+  width: 5%;
+  height: auto;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.middle-section {
+  height: 65vh;
+}
+
+.horizontal-forest-img {
+  width: 95%;
+  height: auto;
+}
+
+.vertical-forest {
+  margin: 0 4% 0 4%;
+  height: 100%;
+}
+
+.vertical-forest-img {
+  height: 100%;
+  width: auto;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.upper-forest, .lower-forest {
+  width: 85vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#right-img, #right-shadow-img, #lower-img, #lower-shadow-img, #lower-right-leaf {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+#lower-left-leaf {
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+#upper-right-leaf {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.certificate-content {
+  width: 90%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.certificate-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.treebanks {
+  font-size: 2vw;
+  font-family: 'Roboto Slab', serif;
+}
+
+.lighter {
+  font-size: 1.5vw;
+  font-weight: 200;
+}
+
+h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 5vw;
+}
+
+h2 {
+  font-size: 2.5vw;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.cursive-large {
+  font-size: 3vw;
+  font-family: 'Pattaya', sans-serif;
+}
+
+.credit {
+  width: 70%;
+  margin: auto;
+  font-size: 2vw;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+#method {
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1vw;
+}
+
+.facebook, .instagram, .twitter {
+  width: 2vw;
+}
+
+.signature {
+  width: 15vw;
+  margin-right: -5vw;
+}
+
+.stamp {
+  width: 9vw;
+}
+
+.treebanks-logo {
+  width: 20vw;
+  height: auto;
+}
+
+.certificate-imgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+/*# sourceMappingURL=styles.css.map */
